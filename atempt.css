@@ -38,26 +38,32 @@ nav a:hover{
 	color:#946bd6;
 	background:#2e0571;
 }
+nav .active{
+    color:#946bd6;
+	background:#2e0571;
+}
 
-ul.main_menu{
+ul.main_nav{
     list-style: none;
 	margin: 0;
     padding: 0;
 	background-color:#946BD6;
 }
 
-.main_menu li{float:left;}
+.main_nav li{float:left;}
 @media (max-width: 991px) {
-	.main_menu li, a {
+	.main_nav li, a {
 		clear: : both !important;
 		width: 100%;
 	}
 }
 @media (min-width:992px){
-	ul.main_menu{border-top: 2px solid #e0e0e0;}
+	ul.main_nav{border-top: 2px solid #e0e0e0;}
+    .show_forSmScreen{display: none;}
 }
 @media (min-width:200px) and (max-width:991px){
-	.hide_main_menu{display:none;}
+	.hide_forSmScreen{display:none;}
+    .show_forSmScreen{display: block;}
 }
 /*КОНЕЦ стили для панели навигации*/
 
@@ -87,19 +93,17 @@ ul.main_menu{
 /*КОНЕЦ стили для маленьких экранов панели навигации*/
 
 /*стили выпадающего меню панели навигации*/
-/*@media (min-width:992px){
+@media (min-width:992px){
     .dropdown:hover .dropdown_content {
         display:block;
     }
-}*/
-.dropdown:hover .dropdown_content {
-    display:block;
 }
+
 .dropdown_content{
 	display:none;
 	position: absolute;
 	background-color: #f9f9f9;
-    min-width: 300px;
+    min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	margin-top:0px;
 	padding: 0px;
@@ -117,7 +121,8 @@ ul.main_menu{
 .dropdown_plus{display: none;}
 
 @media (max-width:991px){
-    .dropdown_content{position: static;}
+    .dropdown_content{
+        position: static; width:100%;}
     .dropdown_plus{
         width: 20% !important;
         display:inline !important;
@@ -126,5 +131,11 @@ ul.main_menu{
         width: 80% !important;
         display:inline !important;
     }
+/*  .dropdown_category_a{display: inline-block !important; width:40%;}
+    .test{
+        display:inline-block !important;
+        width:40%;
+    }*/
+
 }
 /*КОНЕЦ стили панели навигации с категориями и материалами*/
