@@ -2,10 +2,10 @@ body{background:#e0e0e0;}
 
 
 
-.bg-nav{background:#946BD6;}
+.bg-nav{background:#6666ff;} /*цвет навигационной панели*/
 .bg-header{background:#66A1D2;}
 .bg-firstrow{background:#8fb7d9;}
-.bg-header_gradient{background: linear-gradient(to top left, #946BD6 40%, #fff);}
+.bg-header_gradient{background: linear-gradient(to top left, #6666ff 50%, #fff);}
 
 @media (max-width:991px){
     .padding_0_md{
@@ -29,25 +29,28 @@ a{
 }
 
 /*стили для панели навигации*/
+                                 /*цвета ссылок в навигационной панели для больших экранов*/
 nav a{
-	color:#2e0571;
+	color:#000099;
 	display: inline-block;
     padding: 14px 16px;
 }
 nav a:hover{
-	color:#946bd6;
-	background:#2e0571;
+	color:#6666ff;
+	background:#000099;
 }
-nav .active{
-    color:#946bd6;
-	background:#2e0571;
+                                  /*цвета ссылок в навигационной панели для малых экранов*/
+@media (min-width:200px) and (max-width:991px){
+    nav .active{
+        color:#6666ff;
+    	background:#000099;
+    }
 }
 
 ul.main_nav{
     list-style: none;
 	margin: 0;
     padding: 0;
-	background-color:#946BD6;
 }
 
 .main_nav li{float:left;}
@@ -59,11 +62,10 @@ ul.main_nav{
 }
 @media (min-width:992px){
 	ul.main_nav{border-top: 2px solid #e0e0e0;}
-    .show_forSmScreen{display: none;}
 }
 @media (min-width:200px) and (max-width:991px){
 	.hide_forSmScreen{display:none;}
-    .show_forSmScreen{display: block;}
+    .show_forSmScreen{display: block !important;}
 }
 /*КОНЕЦ стили для панели навигации*/
 
@@ -72,10 +74,9 @@ ul.main_nav{
 	display:block;
 	width: 100%;
 	border:none;
-	background: #946BD6;
 	margin: 0 auto;
 	padding: 14px 10px;
-	color: #2e0571;
+	color: #2e0571;                /*цвет бургера навигационной панели на малых экранах*/
 	font-size: 20px;
 	box-sizing: border-box;
 	border-top: 2px solid #e0e0e0;
@@ -102,13 +103,12 @@ ul.main_nav{
 .dropdown_content{
 	display:none;
 	position: absolute;
-	background-color: #f9f9f9;
-    min-width: 250px;
+	min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	margin-top:0px;
 	padding: 0px;
     z-index: 1;
-	background-color: rgba(200, 200, 200, 0.6);
+	background-color: rgba(200, 200, 200, 0.9);
     box-sizing: border-box;
 }
 .dropdown_content a{
@@ -119,10 +119,20 @@ ul.main_nav{
 
 /*стили панели навигации с категориями и материалами*/
 .dropdown_plus{display: none;}
+.dropdown_plus>a {
+    padding:11px 0 6px 0;
+    text-align: center;
+}
+.dropdown_plus>a:after{
+    content: url(images/arrowright_green30.png)
+}
+.dropdown_plus>a.active:after{
+    content: url(images/arrowdown_green30.png)
+}
 
 @media (max-width:991px){
     .dropdown_content{
-        position: static; width:100%;}
+        position: static; width:125%;}
     .dropdown_plus{
         width: 20% !important;
         display:inline !important;
