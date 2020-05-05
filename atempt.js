@@ -14,16 +14,17 @@ var Index
 	$('.dropdown_plus').click(function(){
 		Iam=$(this);
 		Index=$('.dropdown_plus').index(Iam);
-		AddRemove_Active();
+		Toggle_Active();
 		ShowHide_dropdown_content();
 	});
 
-	function AddRemove_Active(){
+	function Toggle_Active(){
 		Iam.find('a').first().toggleClass('active')
-		$('.dropdown_category').eq(Index).find('a').first().toggleClass('active');
+		$('.dropdown_category').eq(Index).find('a').first().toggleClass('active');  //
 	};
 
 	function ShowHide_dropdown_content(){
-		$('.dropdown_content').eq(Index).toggle();
+		$('.dropdown_content').eq(Index).toggleClass('show_forSmScreen');
+
 	};
 });
