@@ -2,11 +2,17 @@ body{background:#e0e0e0;}
 
 
 
-.bg-nav{background:#946BD6;}
+.bg-nav{background:#6666ff;} /*цвет навигационной панели*/
 .bg-header{background:#66A1D2;}
 .bg-firstrow{background:#8fb7d9;}
-.bg-header_gradient{background: linear-gradient(to top left, #946BD6 1%, #e0e0e0);}
+.bg-header_gradient{background: linear-gradient(to top left, #6666ff 50%, #fff);}
 
+@media (max-width:991px){
+    .padding_0_md{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 
 
 .clearfix:after {
@@ -18,82 +24,144 @@ body{background:#e0e0e0;}
 }
 
 a{
-	text-decoration:none !important; 
+	text-decoration:none !important;
 	outline:none !important;
 }
 
+/*стили для панели навигации*/
+                                 /*цвета ссылок в навигационной панели для больших экранов*/
 nav a{
-	color:#2e0571;
+	color:#000099;
 	display: inline-block;
     padding: 14px 16px;
 }
 nav a:hover{
-	color:#946bd6;
-	background:#2e0571;
+	color:#6666ff;
+	background:#000099;
+}
+                                  /*цвета ссылок в навигационной панели для малых экранов*/
+@media (min-width:200px) and (max-width:991px){
+    nav .active{
+        color:#6666ff;
+    	background:#000099;
+    }
 }
 
-ul.main_menu{
+ul.main_nav{
     list-style: none;
 	margin: 0;
     padding: 0;
-	background-color:#946BD6;
 }
 
-.main_menu li{float:left;}
-
-
-
-@media (max-width:1500px){
-	.open_menu{display:none !important;}
-}
-@media (max-width:992px){
-	.open_menu{display:none !important;}
-}
-@media (max-width: 767px) {
-	.main_menu li, a { 
-		float: none; 
-		width: 100%; 
+.main_nav li{float:left;}
+@media (max-width: 991px) {
+	.main_nav li,  {
+		clear: : both !important;
+		width: 100%;
 	}
-	.open_menu{display:block !important;}
-}	
-@media (min-width:767px){
-	ul.main_menu{border-top: 2px solid #e0e0e0;}
 }
-@media (min-width:200px) and (max-width:767px){
-	.hide{display:none;}
+@media (min-width:992px){
+	ul.main_nav{border-top: 2px solid #e0e0e0;}
 }
+@media (min-width:200px) and (max-width:991px){
+	.hide_forSmScreen{display:none;}
+    .show_forSmScreen{display: block !important;}
+}
+/*КОНЕЦ стили для панели навигации*/
 
-.open_menu {
+/*стили для маленьких экранов панели навигации*/
+.button_open_menu {
 	display:block;
-	width: 100%; 
+	width: 100%;
 	border:none;
-	background: #946BD6; 
-	margin: 0 auto; 
-	padding: 14px 10px; 
-	color: #2e0571; 
+	margin: 0 auto;
+	padding: 14px 10px;
+	color: #2e0571;                /*цвет бургера навигационной панели на малых экранах*/
 	font-size: 20px;
 	box-sizing: border-box;
 	border-top: 2px solid #e0e0e0;
-} 
-.open_menu:before {
+}
+.button_open_menu:before {
 	content:"☰ ";
 	margin-right: 10px;
-		
 }
-.dropdown:hover .dropdown_content {
-    display:block;
+@media (max-width:1500px){
+	.button_open_menu{display:none !important;}
 }
+@media (max-width: 991px) {
+    .button_open_menu{display:block !important;}
+}
+/*КОНЕЦ стили для маленьких экранов панели навигации*/
+
+/*стили выпадающего меню панели навигации*/
+@media (min-width:992px){
+    .dropdown:hover .dropdown_content {
+        display:block;
+    }
+}
+
 .dropdown_content{
 	display:none;
 	position: absolute;
-	background-color: #f9f9f9;
-    min-width: 300px;
+	min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	margin-top:0px;
 	padding: 0px;
     z-index: 1;
-	background-color: rgba(200, 200, 200, 0.6);
+	background-color: rgba(200, 200, 200, 0.9);
+    box-sizing: border-box;
+}
+@media (max-width:991px){
+    .dropdown_content{
+        position: static;
+        width:100%;
+    }
 }
 .dropdown_content a{
 	display: block;
 }
+
+/*КОНЕЦ стили выпадающего меню панели навигации*/
+
+
+/*стили панели навигации с категориями и материалами для малых экранов*/
+.dropdown_plus{display: none;}
+.dropdown_plus>a {
+    padding:11px 0 6px 0;
+    text-align: center;
+}
+.dropdown_plus>a:after{
+    content: url(images/arrowright_green30.png)
+}
+.dropdown_plus>a.active:after{
+    content: url(images/arrowdown_green30.png)
+}
+
+@media (max-width:991px){
+
+
+    .dropdown_category{
+        width: 100% !important;
+        display:block !important;
+    }
+    .dropdown_category_a{display:inline-block !important; width: 90%;}
+    .dropdown_plus{
+        display:inline-block !important;
+        width:9%;
+
+    }
+}
+/*КОНЕЦ стили панели навигации с категориями и материалами*/
+
+
+.buttonBasic {
+    text-decoration: none;
+	font-size: 16px;
+	color: #000;
+	outline: none !important;
+	border-radius: 5px;
+	box-shadow: 0 0 0 60px rgba(230,152,122,0) inset, .1em .1em .2em #666;}
+.buttonBasic:active {
+	top: .1em;
+	left: .1em;
+	box-shadow: 0 0 0 60px rgba(230,152,122,.05) inset;}
