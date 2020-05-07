@@ -2,19 +2,17 @@ body{background:#e0e0e0;}
 
 
 
-.bg-nav{background:#6633FF;}
+.bg-nav{background:#6666ff;} /*цвет навигационной панели*/
 .bg-header{background:#66A1D2;}
 .bg-firstrow{background:#8fb7d9;}
-.bg-header_gradient{background: linear-gradient(to top left, #6633FF 30%, #fff);}
-.bg-nav_gradient{background: linear-gradient(to bottom right, #bdaadc 1%, #946BD6);}
+.bg-header_gradient{background: linear-gradient(to top left, #6666ff 50%, #fff);}
 
-@media(max-width:991px){
-    .pSM_0{
+@media (max-width:991px){
+    .padding_0_md{
         padding-left: 0;
         padding-right: 0;
     }
 }
-
 
 
 .clearfix:after {
@@ -31,79 +29,94 @@ a{
 	outline:none !important;
 }
 
+/*стили для панели навигации*/
+                                 /*цвета ссылок в навигационной панели для больших экранов*/
 nav a{
-	color:#2e0571;
+	color:#000099;
 	display: inline-block;
     padding: 14px 16px;
 }
 nav a:hover{
-	color:#946bd6;
-	background:#2e0571;
+	color:#6666ff;
+	background:#000099;
+}
+                                  /*цвета ссылок в навигационной панели для малых экранов*/
+@media (min-width:200px) and (max-width:991px){
+    nav .active{
+        color:#6666ff;
+    	background:#000099;
+    }
 }
 
-nav ul{
+ul.main_nav{
     list-style: none;
 	margin: 0;
     padding: 0;
-	background-color:#6633FF;
 }
 
-.main_menu li{float:left;}
-
+.main_nav li{float:left;}
 @media (max-width: 991px) {
-	.main_menu li, a {
-		float: none;
+	.main_nav li, a {
+		clear: : both !important;
 		width: 100%;
 	}
 }
 @media (min-width:992px){
-	ul.main_menu{border-top: 2px solid #e0e0e0;}
+	ul.main_nav{border-top: 2px solid #e0e0e0;}
 }
-@media (max-width:991px){
-	.hide_main_menu{display:none;}
+@media (min-width:200px) and (max-width:991px){
+	.hide_forSmScreen{display:none;}
+    .show_forSmScreen{display: block !important;}
 }
-/*КОНЕЦ стили для навигационной панели*/
+/*КОНЕЦ стили для панели навигации*/
 
-/*навигационная панель на малых экранах*/
+/*стили для маленьких экранов панели навигации*/
 .button_open_menu {
-    display:block;
+	display:block;
 	width: 100%;
 	border:none;
-	background: #6633FF;
 	margin: 0 auto;
 	padding: 14px 10px;
-	color: #2e0571;
+	color: #2e0571;                /*цвет бургера навигационной панели на малых экранах*/
 	font-size: 20px;
 	box-sizing: border-box;
 	border-top: 2px solid #e0e0e0;
 }
 .button_open_menu:before {
-	content:"☰";
+	content:"☰ ";
 	margin-right: 10px;
 }
-@media (min-width:992px) and (max-width:1500px) {
-    .button_open_menu{display:none !important;}
+@media (max-width:1500px){
+	.button_open_menu{display:none !important;}
 }
-@media (max-width:991px) {
+@media (max-width: 991px) {
     .button_open_menu{display:block !important;}
 }
-/*КОНЕЦ навигационная панель на малых экранах*/
+/*КОНЕЦ стили для маленьких экранов панели навигации*/
 
-/*стили выпадающего списка навигационной панели*/
-@media(min-width:992px){
-    .dropdown:hover .dropdown_content {display:block; }
+/*стили выпадающего меню панели навигации*/
+@media (min-width:992px){
+    .dropdown:hover .dropdown_content {
+        display:block;
+    }
 }
-
 
 .dropdown_content{
 	display:none;
-   	background-color: #f9f9f9;
-    min-width: 250px;
+	position: absolute;
+	min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	margin-top:0px;
 	padding: 0px;
     z-index: 1;
-	background-color: rgba(200, 200, 200, 0.6);
+	background-color: rgba(200, 200, 200, 0.9);
+    box-sizing: border-box;
+}
+@media (max-width:991px){
+    .dropdown_content{
+        position: static;
+        width:100%;
+    }
 }
 .dropdown_content li, a{
 	display: block;
@@ -128,19 +141,5 @@ nav ul{
 
 
 /*КОНЕЦ стили для кнопки выпадающего меню и ссылки на раздел*/
-@media(min-width:992px){
-     .dropdown_title{display: none;}
-}
-@media (max-width:991px){
-    .dropdown_rubric{
-        width:90% !important;
-        float: left !important;
-        overflow: hidden;
-    }
-    .dropdown_title{
-        width: 10% !important;
-        float: left !important;
-        display:block;
-        overflow: hidden;
-    }
-}
+
+/*КОНЕЦ стили выпадающего меню панели навигации*/
