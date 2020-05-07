@@ -13,7 +13,7 @@
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://calculatorfs.ru/css/bootstrap.min.css">
-		<link rel="stylesheet" href="atempt.css?version=3"><!--https://calculatorfs.ru/css/-->
+		<link rel="stylesheet" href="atempt.css?version=4"><!--https://calculatorfs.ru/css/-->
 		<link rel="shortcut icon" href="https://calculatorfs.ru/images/images_main/favicon.ico" type="image/x-icon">
 	</head>
 
@@ -24,32 +24,35 @@
 			<header class="row"> <!--первый ряд (шапка)-->
 
 				<div class="col-lg-10 offset-lg-1 d-none d-lg-block"><!--колонка логотип для LG-->
-					<div class="bg-header_gradient">
+					<div class="bg-nav">
 						<a class="" href="https://calculatorfs.ru/"><img class="m-3" src="https://calculatorfs.ru/images/images_main/logoSmall.png"></a>
 					</div>
 				</div><!--КОНЕЦ колонка логотип для LG-->
 
 				<div class="col-12 d-lg-none d-block text-center padding_0_md"><!--колонка логотип для SM-->
-					<div class=" bg-header_gradient">
+					<div class=" bg-nav">
 						<a href="https://calculatorfs.ru/"><img class="m-3" src="https://calculatorfs.ru/images/images_main/logoSmall.png"></a>
 					</div>
 				</div><!--КОНЕЦ колонка логотип для SM-->
 
 
 
-				<div class="col-lg-1 d-lg-block d-none"></div><!--колонка отступа-->
+
 			</header><!--КОНЕЦ первый ряд (шапка)-->
 
 
 			<nav class="row"> <!--второй ряд (Навигация)-->
 				<div class="col-lg-10 offset-lg-1 padding_0_md"><!--колонка Навигация-->
-						<a class="button_open_menu bg-nav" href="#"></a>
-						<ul class="main_nav bg-nav clearfix hide_forSmScreen"><!--список навигации-->
-							<li class="">
+						<a class="button_open_menu bg-nav" href="javascript:void(0)"></a>
+						<div class="main_nav bg-nav clearfix hide_forSmScreen"><!--список навигации-->
+							<div class="">
 								<a class="" href="https://calculatorfs.ru">Главная</a>
-							</li>
-							<li class="dropdown">
-								<a class="" href="#">Правила ФК</a>
+							</div>
+
+
+							<div class="dropdown">
+								<a class="dropdown_category" href="https://calculatorfs.ru/rules-fs.html">Правила ФК</a>
+								<a class="dropdown_arrow" href="javascript:void(0)">&#9660;</a>
 								<div class="dropdown_content">
 									<a class="" href="https://calculatorfs.ru/rules-fs/elementi-programmi.html">Разрядные требования</a>
 									<a class="" href="https://calculatorfs.ru/rules-fs/yrovni-sloznosti.html">Уровни сложности</a>
@@ -57,18 +60,24 @@
 									<a class="" href="https://calculatorfs.ru/rules-fs/all-about-goe.html">Все о GOE</a>
 									<a class="" href="https://calculatorfs.ru/rules-fs/componenti-programmi.html">Компоненты программы</a>
 								</div>
-							</li>
-							<li class="dropdown">
-								<a class="" href="javascript:void(0)">Сервисы</a>
+							</div>
+
+
+
+							<div class="dropdown">
+								<a class="dropdown_category" href="https://calculatorfs.ru/services.html">Сервисы</a>
+								<a class="dropdown_arrow" href="javascript:void(0)">&#9660;</a>
 								<div class="dropdown_content">
 									<a class="" href="https://calculatorfs.ru/calculator.html">Калькулятор</a>
 									<a class="" href="https://calculatorfs.ru/guide-of-points.html">Стоимость элементов</a>
 								</div>
-							</li>
-							<li>
+							</div>
+
+
+							<div>
 								<a class="" href="https://calculatorfs.ru/about.html">О проекте</a>
-							</li>
-						</ul><!--КОНЕЦ список навигации-->
+							</div>
+						</div><!--КОНЕЦ список навигации-->
 
 				</div><!--КОНЕЦ колонка Навигация-->
 			</nav><!--КОНЕЦ второй ряд (Навигация)-->
@@ -110,25 +119,38 @@
 			</div>
 
 
-			<footer class="row backgroundBlack fontLink text-white mt-5 p-2"> <!--ПОДВАЛ-->
+			<footer class="row  mt-5 pt-2"> <!--ПОДВАЛ-->
 
-				<div class="col-3 d-none d-md-block"><!--Навигация-->
-					<!--<div class="text-warning">Навигация</div>-->
-					<div><a class="fontLink" href="https://calculatorfs.ru/">Главная</a></div>
-					<div><a class="fontLink" href="https://calculatorfs.ru/rules-fs.html">Правила ФК</a></div>
-					<div><a class="fontLink" href="https://calculatorfs.ru/about.html">О проекте</a></div>
+				<div class="col-12 col-lg-10 offset-lg-1 padding_0_md"><!--для связи-->
+					<div class="text-center text_blue bg-blue">
+						Для связи
+						<div><a class="" href="https://vk.com/calculatorfs" target="_blank">Мы Вконтакте</a></div>
+					</div>
+				</div><!--КОНЕЦ для связи -->
+
+				<div class="col-12 col-lg-10 offset-lg-1 padding_0_md"><!--Навигация-->
+					<div class="text_blue bg-blue p-2">
+						<img class="float-right" src="image/doublecamel1SM.png">
+
+						Навигация
+							<div><a class="" href="https://calculatorfs.ru/">Главная</a></div>
+							<div><a class="" href="https://calculatorfs.ru/rules-fs.html">Правила ФК</a></div>
+							<div><a class="" href="https://calculatorfs.ru/services.html">Сервисы</a></div>
+							<div><a class="" href="https://calculatorfs.ru/about.html">О проекте</a></div>
+
+					</div>
 				</div><!--КОНЕЦ Навигация-->
 
-				<div class="col col-md-6 text-center"><!--вторая колонка подвала-->
-					<!--<div class="text-warning">Для связи</div>-->
-					<div><a class="fontLink" href="https://vk.com/calculatorfs" target="_blank">Мы Вконтакте</a></div>
-				</div><!--КОНЕЦ второй колонки подвала -->
 
-				<div  class="col-4 col-md-2 offset-md-1 d-lg-none"><!--колонка  Поделиться Яндекс-->
-					<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-					<script src="https://yastatic.net/share2/share.js"></script>
-					<div class="ya-share2" data-services="vkontakte,facebook,twitter,telegram"></div>
-				</div><!--/КОНЕЦ колонки  Поделиться Яндекс-->
+
+				<div  class="col-12 col-lg-10 offset-lg-1 padding_0_md"><!--колонка  Поделиться Яндекс-->
+					<div class="bg-green text_green text-center">
+						Поделиться
+						<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+						<script src="https://yastatic.net/share2/share.js"></script>
+						<div class="ya-share2 pt-2 pb-2" data-services="vkontakte,facebook,twitter,telegram"></div>
+					</div>
+				</div><!--КОНЕЦ колонки  Поделиться Яндекс-->
 
 			</footer>
 
