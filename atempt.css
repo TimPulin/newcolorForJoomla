@@ -14,6 +14,7 @@ body{background:#e0e0e0;}
     }
 }
 
+.box{border:1px solid #000;}
 
 .clearfix:after {
   content: '.';
@@ -33,7 +34,7 @@ a{
                                  /*цвета ссылок в навигационной панели для больших экранов*/
 nav a{
 	color:#000099;
-	display: inline-block;
+	display: block;
     padding: 14px 16px;
 }
 nav a:hover{
@@ -48,39 +49,33 @@ nav a:hover{
     }
 }
 
-ul.main_nav{
-    list-style: none;
-	margin: 0;
-    padding: 0;
+div.main_nav{padding: 0; margin: 0;}
+
+
+@media(min-width:992px){
+    .main_nav{border-top: 2px solid #e0e0e0;}
+    .main_nav>div{display: inline-block;}
+}
+@media(max-width:991px){
+    .main_nav>div{border-top: 1px solid #e0e0e0;}
 }
 
-.main_nav li{float:left;}
-@media (max-width: 991px) {
-	.main_nav li, a {
-		clear: : both !important;
-		width: 100%;
-	}
-}
-@media (min-width:992px){
-	ul.main_nav{border-top: 2px solid #e0e0e0;}
-}
 @media (min-width:200px) and (max-width:991px){
 	.hide_forSmScreen{display:none;}
     .show_forSmScreen{display: block !important;}
 }
-/*КОНЕЦ стили для панели навигации*/
 
 /*стили для маленьких экранов панели навигации*/
 .button_open_menu {
 	display:block;
 	width: 100%;
 	border:none;
+    border-top: 2px solid #e0e0e0;
 	margin: 0 auto;
 	padding: 14px 10px;
 	color: #2e0571;                /*цвет бургера навигационной панели на малых экранах*/
 	font-size: 20px;
 	box-sizing: border-box;
-	border-top: 2px solid #e0e0e0;
 }
 .button_open_menu:before {
 	content:"☰ ";
@@ -118,7 +113,7 @@ ul.main_nav{
         width:100%;
     }
 }
-.dropdown_content li, a{
+.dropdown_content a{
 	display: block;
     width:100%;
     box-sizing: border-box;
@@ -129,17 +124,32 @@ ul.main_nav{
 @media (min-width:200px) and (max-width:991px){
     .dropdown_content{
         position:static;
+
      }
-     .dropdown:hover .dropdown_content li, a {
-         display:inline-block;
-     }
+
 }
 /*КОНЕЦ стили выпадающего списка навигационной панели*/
 
-/*стили для кнопки выпадающего меню и ссылки на раздел*/
+/*стили для работы выпадающего меню на малых экранах*/
 
+.dropdown_arrow {display:none !important;}
+@media (max-width:991px) {
+    .dropdown{
+        display: inline-flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+     }
+    .dropdown_category{flex-grow: 100;}
+    .dropdown_arrow{
+        display:inline-block !important;
+        height: 52px !important;
+        margin-right: 1px;
+        border-left: 1px solid #e0e0e0; /* e0e0e0 000099;*/
+        border-right: 1px solid #e0e0e0;
+        border-radius: 5px;
+    }
+    .dropdown_content{flex-grow: 100;}
+}
 
-
-/*КОНЕЦ стили для кнопки выпадающего меню и ссылки на раздел*/
-
-/*КОНЕЦ стили выпадающего меню панели навигации*/
+/*КОНЕЦ стили для работы выпадающего меню на малых экранах*/
