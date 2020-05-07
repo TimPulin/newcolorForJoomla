@@ -24,12 +24,13 @@ body{background:#e0e0e0;}
   visibility: hidden;
 }
 
-/*стили для навигационной панели*/
+
 a{
 	text-decoration:none !important;
 	outline:none !important;
 }
 
+/*---------------------------СТИЛИ ПАНЕЛИ НАВИГАЦИИ-----------------------------------------*/
 /*стили для панели навигации*/
                                  /*цвета ссылок в навигационной панели для больших экранов*/
 nav a{
@@ -153,3 +154,19 @@ div.main_nav{padding: 0; margin: 0;}
 }
 
 /*КОНЕЦ стили для работы выпадающего меню на малых экранах*/
+/*---------------------------КОНЕЦ СТИЛИ ПАНЕЛИ НАВИГАЦИИ-----------------------------------------*/
+
+/*------------------------------------------СТИЛИ ПОДВАЛА-----------------------------------------*/
+.text_color_blue{color:#333399;}
+.text_color_green{color: #339900;}
+footer a{color:#ccc;}/*333366*/
+.bg-green-66FF00{background-color: #66FF00;}
+.bg-blue-6666FF{background-color: #6666FF;}
+
+.bg-green-00FF00{background-color: #00FF00;}
+.bg-green-00FF33{background-color: #00FF33;}
+.bg-blue-6666CC{background-color: #6666CC;}
+
+@media (max-width:991px) {
+    footer>div{border-top:2px solid  #e0e0e0;}
+}
