@@ -1,102 +1,166 @@
-/*цвета
-первый ряд #8fb7d9
-  основной ряд #e0e0e0	
-*/
-.bg-firstrow{background:#8fb7d9;}
-.bg-header{background:#66A1D2;}
-.bg-mainrow{background:#e0e0e0;}
-.bg-nav{background:#946BD6;}
-
-.box{border:1px solid black;}
-
 body{background:#e0e0e0;}
 
-a{text-decoration:none !important;}
 
 
+.bg-nav{background:#6666ff;} /*цвет навигационной панели*/ /*6666ff*/
+.bg-header{background:#66A1D2;}
+.bg-firstrow{background:#8fb7d9;}
+.bg-header_gradient{background: linear-gradient(to top left, #6666ff 50%, #fff);}
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+@media (max-width:991px){
+    .padding_0_md{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 300px;
+.box{border:1px solid #000;}
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+
+a{
+	text-decoration:none !important;
+	outline:none !important;
+}
+
+/*---------------------------СТИЛИ ПАНЕЛИ НАВИГАЦИИ-----------------------------------------*/
+/*стили для панели навигации*/
+                                 /*цвета ссылок в навигационной панели для больших экранов*/
+nav a{
+	color:#000099;
+	display: block;
+    padding: 14px 16px;
+}
+nav a:hover{
+	color:#6666ff;
+	background:#000099;
+}
+                                  /*цвета ссылок в навигационной панели для малых экранов*/
+@media (min-width:200px) and (max-width:991px){
+    nav .active{
+        color:#6666ff;
+    	background:#000099;
+    }
+}
+
+div.main_nav{padding: 0; margin: 0;}
+
+
+@media(min-width:992px){
+    .main_nav{border-top: 2px solid #e0e0e0;}
+    .main_nav>div{display: inline-block;}
+}
+@media(max-width:991px){
+    .main_nav>div{border-top: 1px solid #e0e0e0;}
+}
+
+@media (min-width:200px) and (max-width:991px){
+	.hide_forSmScreen{display:none;}
+    .show_forSmScreen{display: block !important;}
+}
+
+/*стили для маленьких экранов панели навигации*/
+.button_open_menu {
+	display:block;
+	width: 100%;
+	border:none;
+    border-top: 2px solid #e0e0e0;
+	margin: 0 auto;
+	padding: 14px 10px;
+	color: #2e0571;                /*цвет бургера навигационной панели на малых экранах*/
+	font-size: 20px;
+	box-sizing: border-box;
+}
+.button_open_menu:before {
+	content:"☰ ";
+	margin-right: 10px;
+}
+@media (max-width:1500px){
+	.button_open_menu{display:none !important;}
+}
+@media (max-width: 991px) {
+    .button_open_menu{display:block !important;}
+}
+/*КОНЕЦ стили для маленьких экранов панели навигации*/
+
+/*стили выпадающего меню панели навигации*/
+@media (min-width:992px){
+    .dropdown:hover .dropdown_content {
+        display:block;
+    }
+}
+
+.dropdown_content{
+	display:none;
+	position: absolute;
+	min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	margin-top:0px;
 	padding: 0px;
     z-index: 1;
-	background-color: rgba(200, 200, 200, 0.6);
+	background-color: rgba(200, 200, 200, 0.9);
+    box-sizing: border-box;
 }
-.dropdown-content li{
-	display: inline;
-	width:100%
+@media (max-width:991px){
+    .dropdown_content{
+        position: static;
+        width:100%;
+    }
 }
-
-.dropdown:hover .dropdown-content {
-    display:block;
-}
-
-.dropdown-content a {
-	padding:10px;
-	margin-top:;
-	display:block;
-	text-align:left;
-}
-.dropdown-content li{clear: both; }}
-.dropdown-content ul{padding:0px;}
-.navigation{
-	margin-top:4px;
-	text-align:center;
-	background:#946BD6;
-}
-
-ul  {
-    list-style-type: none;
-	margin: 0;
-    padding: 0;
-	/*overflow: hidden;
-   /* padding:10px;*/
-}
-nav li {
-	float: left;
-	/*display: inline;*/
-}
-
-nav li a  {
-	
+.dropdown_content a{
 	display: block;
-    color:#2e0571;
-    text-align: center;
-    padding: 16px 16px;
-    text-decoration: none;
-	
-	/*text-align: center;
-	padding-top:12px;
-	padding-bottom:11px;
-	padding-right: 20px;
-	padding-left:20px;
-	color:#2e0571;*/
+    width:100%;
+    box-sizing: border-box;
 }
-
-nav li a:hover{
-	color:#946bd6;
-	background:#2e0571;
+@media (max-width:1500px){
+    .dropdown_content {position: absolute;}
 }
+@media (min-width:200px) and (max-width:991px){
+    .dropdown_content{
+        position:static;
 
-/*ДЛЯ ФУТЕРА*/
-footer ul{list-style-type: none;
-	padding:0px 0px;
-	margin:0;
+     }
 
 }
-footer a{
-	color:#2e0571 !important;
-	margin:10px;
+/*КОНЕЦ стили выпадающего списка навигационной панели*/
+
+/*стили для работы выпадающего меню на малых экранах*/
+
+.dropdown_arrow {display:none !important;}
+@media (max-width:991px) {
+    .dropdown{
+        display: inline-flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+     }
+    .dropdown_category{flex-grow: 100;}
+    .dropdown_arrow{
+        display:inline-block !important;
+        height: 52px !important;
+        margin-right: 1px;
+        border-left: 1px solid #e0e0e0; /* e0e0e0 000099;*/
+        border-right: 1px solid #e0e0e0;
+        border-radius: 5px;
+    }
+    .dropdown_content{flex-grow: 100;}
 }
-footer a:hover{
-	color:#48DD00 !important;
-}
+
+/*КОНЕЦ стили для работы выпадающего меню на малых экранах*/
+/*---------------------------КОНЕЦ СТИЛИ ПАНЕЛИ НАВИГАЦИИ-----------------------------------------*/
+
+/*------------------------------------------СТИЛИ ПОДВАЛА-----------------------------------------*/
+footer a{color:#ccc;}/*333366*/
+footer>div:last-child{border-top:2px solid  #e0e0e0;}
+.text_blue{color:#333399;}
+.text_green{color: #339900;}
+.bg-green{background-color: #66FF00;}
+.bg-blue{background-color: #6666FF;}
+/*------------------------------------------КОНЕЦ СТИЛИ ПОДВАЛА-----------------------------------------*/
