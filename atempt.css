@@ -2,7 +2,7 @@ body{background:#e0e0e0;}
 
 
 
-.bg-nav{background:#6666ff;} /*цвет навигационной панели*/
+.bg-nav{background:#6666ff;} /*цвет навигационной панели*/ /*6666ff*/
 .bg-header{background:#66A1D2;}
 .bg-firstrow{background:#8fb7d9;}
 .bg-header_gradient{background: linear-gradient(to top left, #6666ff 50%, #fff);}
@@ -157,16 +157,10 @@ div.main_nav{padding: 0; margin: 0;}
 /*---------------------------КОНЕЦ СТИЛИ ПАНЕЛИ НАВИГАЦИИ-----------------------------------------*/
 
 /*------------------------------------------СТИЛИ ПОДВАЛА-----------------------------------------*/
-.text_color_blue{color:#333399;}
-.text_color_green{color: #339900;}
 footer a{color:#ccc;}/*333366*/
-.bg-green-66FF00{background-color: #66FF00;}
-.bg-blue-6666FF{background-color: #6666FF;}
-
-.bg-green-00FF00{background-color: #00FF00;}
-.bg-green-00FF33{background-color: #00FF33;}
-.bg-blue-6666CC{background-color: #6666CC;}
-
-@media (max-width:991px) {
-    footer>div{border-top:2px solid  #e0e0e0;}
-}
+footer>div:last-child{border-top:2px solid  #e0e0e0;}
+.text_blue{color:#333399;}
+.text_green{color: #339900;}
+.bg-green{background-color: #66FF00;}
+.bg-blue{background-color: #6666FF;}
+/*------------------------------------------КОНЕЦ СТИЛИ ПОДВАЛА-----------------------------------------*/
