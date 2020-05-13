@@ -24,13 +24,13 @@
 			<header class="row"> <!--первый ряд (шапка)-->
 
 				<div class="col-lg-10 offset-lg-1 d-none d-lg-block"><!--колонка логотип для LG-->
-					<div class="bg-nav">
+					<div class="bg-header">
 						<a class="" href="https://calculatorfs.ru/"><img class="m-3" src="https://calculatorfs.ru/images/images_main/logoSmall.png"></a>
 					</div>
 				</div><!--КОНЕЦ колонка логотип для LG-->
 
 				<div class="col-12 d-lg-none d-block text-center padding_0_md"><!--колонка логотип для SM-->
-					<div class=" bg-nav">
+					<div class=" bg-header">
 						<a href="https://calculatorfs.ru/"><img class="m-3" src="https://calculatorfs.ru/images/images_main/logoSmall.png"></a>
 					</div>
 				</div><!--КОНЕЦ колонка логотип для SM-->
@@ -40,7 +40,7 @@
 			<nav class="row"> <!--второй ряд (Навигация)-->
 				<div class="col-lg-10 offset-lg-1 padding_0_md"><!--колонка Навигация-->
 						<a class="button_open_menu bg-nav" href="javascript:void(0)"></a>
-						<ul class="main_nav bg-nav clearfix hide_forSmScreen"><!--список навигации-->
+						<ul class="main_nav bg-nav clearfix hide_forSmScreen" id="main_nav"><!--список навигации-->
 							<li class="">
 								<a class="" href="https://calculatorfs.ru">Главная</a>
 							</li>
@@ -48,13 +48,13 @@
 							<li class="dropdown">
 								<a class="dropdown_category" href="https://calculatorfs.ru/rules-fs.html">Правила ФК</a>
 								<a class="dropdown_arrow" href="javascript:void(0)">&#9660;</a>
-								<div class="dropdown_content">
-									<a class="" href="https://calculatorfs.ru/rules-fs/elementi-programmi.html">Разрядные требования</a>
-									<a class="" href="https://calculatorfs.ru/rules-fs/yrovni-sloznosti.html">Уровни сложности</a>
-									<a class="" href="https://calculatorfs.ru/rules-fs/spins-positions.html">Позиции вращений</a>
-									<a class="" href="https://calculatorfs.ru/rules-fs/all-about-goe.html">Все о GOE</a>
-									<a class="" href="https://calculatorfs.ru/rules-fs/componenti-programmi.html">Компоненты программы</a>
-								</div>
+								<ul class="dropdown_content">
+									<li>	<a class="" href="https://calculatorfs.ru/rules-fs/elementi-programmi.html">Разрядные требования</a></li>
+									<li>	<a class="" href="https://calculatorfs.ru/rules-fs/yrovni-sloznosti.html">Уровни сложности</a></li>
+									<li>	<a class="" href="https://calculatorfs.ru/rules-fs/spins-positions.html">Позиции вращений</a></li>
+									<li>	<a class="" href="https://calculatorfs.ru/rules-fs/all-about-goe.html">Все о GOE</a></li>
+									<li>	<a class="" href="https://calculatorfs.ru/rules-fs/componenti-programmi.html">Компоненты программы</a></li>
+								</ul>
 							</li>
 
 							<li class="dropdown">
@@ -110,11 +110,11 @@
 			</div>
 
 
-			<footer class="row  mt-5 pt-2"> <!--ПОДВАЛ-->
+			<footer class="row  mt-5 mt-5"> <!--ПОДВАЛ-->
 
 				<div class="col-12 col-lg-10 offset-lg-1 padding_0_md"><!--для связи-->
 					<div class="text-center text_blue bg-blue">
-						Для связи
+						Соцсети
 						<div><a class="" href="https://vk.com/calculatorfs" target="_blank">Мы Вконтакте</a></div>
 					</div>
 				</div><!--КОНЕЦ для связи -->
