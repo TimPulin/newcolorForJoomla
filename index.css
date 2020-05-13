@@ -49,16 +49,18 @@ nav a:hover{
     	background:#000099;
     }
 }
-
-div.main_nav{padding: 0; margin: 0;}
+nav li {
+    list-style-type: none;
+   }
+ul.main_nav{padding: 0; margin: 0;}
 
 
 @media(min-width:992px){
     .main_nav{border-top: 2px solid #e0e0e0;}
-    .main_nav>div{display: inline-block;}
+    .main_nav>li{display: inline-block;}
 }
 @media(max-width:991px){
-    .main_nav>div{border-top: 1px solid #e0e0e0;}
+    .main_nav>li{border-top: 1px solid #e0e0e0;}
 }
 
 @media (min-width:200px) and (max-width:991px){
@@ -163,4 +165,7 @@ footer>div:last-child{border-top:2px solid  #e0e0e0;}
 .text_green{color: #339900;}
 .bg-green{background-color: #66FF00;}
 .bg-blue{background-color: #6666FF;}
+
+footer li {list-style-type: none;}
+footer ul {padding: 0; margin: 0;}
 /*------------------------------------------КОНЕЦ СТИЛИ ПОДВАЛА-----------------------------------------*/
