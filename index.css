@@ -157,6 +157,11 @@ ul.main_nav{padding: 0; margin: 0;}
         border-right: 1px solid #e0e0e0;
         border-radius: 5px;
     }
+
+     .dropdown_arrow:hover{
+         color:#000099;
+         background:inherit;
+     }
     .dropdown_content{flex-grow: 100;}
 }
 
