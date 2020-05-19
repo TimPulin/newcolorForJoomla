@@ -5,6 +5,7 @@ body{background:#e0e0e0;}
 .bg-nav{background:#66A1D2;} /*цвет навигационной панели*/ /*6666ff*/
 .bg-header{background: linear-gradient(to top left, #66A1D2 40%, #fff);} /*#66A1D2*/
 //.bg-header{background:#66A1D2;}
+
 .bg-firstrow{background:#8fb7d9;}
 .bg-header_gradient{background: linear-gradient(to top left, #66A1D2 50%, #fff);}
 
@@ -169,15 +170,22 @@ nav .dropdown_content a{
 /*---------------------------КОНЕЦ СТИЛИ ПАНЕЛИ НАВИГАЦИИ-----------------------------------------*/
 
 /*------------------------------------------СТИЛИ ПОДВАЛА-----------------------------------------*/
+footer ul{
+    padding: 0;
+    margin: 0;
+}
+footer li{list-style-type: none;}
 footer a{color:#ccc;}/*333366*/
 footer a:hover{color:#55546F;}
 footer>div:last-child{border-top:2px solid  #e0e0e0;}
 .text_blue{color:#0C3C64;}
 .text_green{color: #339900;}
 .bg-green{background-color: #66FF00;}
+
 .bg-blue{background-color: #66A1D2;} /*бывший цвет 6666FF*/
 
 footer li {list-style-type: none;}
 footer ul {padding: 0; margin: 0; display:inline-block;}
 footer h5{font-weight: 400; font-size: 16px;}
+
 /*------------------------------------------КОНЕЦ СТИЛИ ПОДВАЛА-----------------------------------------*/
