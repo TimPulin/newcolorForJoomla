@@ -1,19 +1,19 @@
 
 //открытие и закрытие меню навигации на малых экранах
-$(document).ready(function(){
-	$('.button_open_menu').click(function(){
-		$('.main_nav').toggleClass('hide_forSmScreen');
+jQuery(document).ready(function(){
+	jQuery('.button_open_menu').click(function(){
+		jQuery('.nav_menu').toggleClass('hide_forSmScreen');
 
 	});
 });
 
 //работа с открытием в навигации списка материалов на малых экранах
-$(document).ready(function(){
+jQuery(document).ready(function(){
 var Iam
 var Index
-	$('.dropdown_arrow').click(function(){
-		Iam=$(this);
-		Index=$('.dropdown_arrow').index(Iam);
+	jQuery('.dropdown_arrow').click(function(){
+		Iam=jQuery(this);
+		Index=jQuery('.dropdown_arrow').index(Iam);
 		Toggle_Active();
 		ShowHide_dropdown_content();//&#9650; стрелка вверх
 		ChangeArrow();
@@ -22,11 +22,11 @@ var Index
 
 	function Toggle_Active(){
 		Iam.toggleClass('active')
-		$('.dropdown_category').eq(Index).toggleClass('active');
+		jQuery('.dropdown_category').eq(Index).toggleClass('active');
 	};
 
 	function ShowHide_dropdown_content(){
-		$('.dropdown_content').eq(Index).toggleClass('show_forSmScreen');
+		jQuery('.dropdown_content').eq(Index).toggleClass('show_forSmScreen');
 
 	};
 
