@@ -3,9 +3,11 @@ body{background:#e0e0e0;}
 
 
 .bg-nav{background:#66A1D2;} /*цвет навигационной панели*/ /*6666ff*/
-.bg-header{background:#66A1D2;}
+.bg-header{background: linear-gradient(to top left, #66A1D2 40%, #fff);} /*#66A1D2*/
+//.bg-header{background:#66A1D2;}
+
 .bg-firstrow{background:#8fb7d9;}
-.bg-header_gradient{background: linear-gradient(to top left, #6666ff 50%, #fff);}
+.bg-header_gradient{background: linear-gradient(to top left, #66A1D2 50%, #fff);}
 
 @media (max-width:991px){
     .padding_0_md{
@@ -24,6 +26,8 @@ body{background:#e0e0e0;}
   visibility: hidden;
 }
 
+button:active{text-decoration: none;outline: none;}
+button:focus{text-decoration: none;	outline: none;}
 
 a{
 	text-decoration:none !important;
@@ -34,36 +38,40 @@ a{
 /*стили для панели навигации*/
                                  /*цвета ссылок в навигационной панели для больших экранов*/
 nav a{
-	color:#000099;
+	color:#012442; /*000099*/
 	display: block;
     padding: 14px 16px;
 }
 nav a:hover{
-	color:#6666ff;
-	background:#000099;
+	color:#66A1D2;/*6666ff*/
+	background:#012442;/*000099*/
+}
+nav a.active{
+    color:#66A1D2;
+    background:#012442;
 }
                                   /*цвета ссылок в навигационной панели для малых экранов*/
 @media (min-width:200px) and (max-width:991px){
     nav .active{
-        color:#6666ff;
-    	background:#000099;
+        color:#66A1D2;
+    	background:#012442;
     }
 }
-
-div.main_nav{padding: 0; margin: 0;}
+nav li {list-style-type: none;}
+nav ul.nav_menu{padding: 0; margin: 0;}
 
 
 @media(min-width:992px){
-    .main_nav{border-top: 2px solid #e0e0e0;}
-    .main_nav>div{display: inline-block;}
+    nav .nav_menu{border-top: 2px solid #e0e0e0;}
+    nav .nav_menu>li{display: inline-block;}
 }
 @media(max-width:991px){
-    .main_nav>div{border-top: 1px solid #e0e0e0;}
+    nav .nav_menu>li{border-top: 1px solid #e0e0e0;}
 }
 
 @media (min-width:200px) and (max-width:991px){
-	.hide_forSmScreen{display:none;}
-    .show_forSmScreen{display: block !important;}
+	nav .hide_forSmScreen{display:none;}
+    nav .show_forSmScreen{display: block !important;}
 }
 
 /*стили для маленьких экранов панели навигации*/
@@ -92,12 +100,12 @@ div.main_nav{padding: 0; margin: 0;}
 
 /*стили выпадающего меню панели навигации*/
 @media (min-width:992px){
-    .dropdown:hover .dropdown_content {
+    nav .dropdown:hover .dropdown_content {
         display:block;
     }
 }
 
-.dropdown_content{
+nav .dropdown_content{
 	display:none;
 	position: absolute;
 	min-width: 250px;
@@ -114,16 +122,16 @@ div.main_nav{padding: 0; margin: 0;}
         width:100%;
     }
 }
-.dropdown_content a{
+nav .dropdown_content a{
 	display: block;
     width:100%;
     box-sizing: border-box;
 }
 @media (max-width:1500px){
-    .dropdown_content {position: absolute;}
+    nav .dropdown_content {position: absolute;}
 }
 @media (min-width:200px) and (max-width:991px){
-    .dropdown_content{
+    nav .dropdown_content{
         position:static;
 
      }
@@ -135,14 +143,14 @@ div.main_nav{padding: 0; margin: 0;}
 
 .dropdown_arrow {display:none !important;}
 @media (max-width:991px) {
-    .dropdown{
+    nav .dropdown{
         display: inline-flex;
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
      }
-    .dropdown_category{flex-grow: 100;}
-    .dropdown_arrow{
+    nav .dropdown_category{flex-grow: 100;}
+    nav .dropdown_arrow{
         display:inline-block !important;
         height: 52px !important;
         margin-right: 1px;
@@ -150,7 +158,12 @@ div.main_nav{padding: 0; margin: 0;}
         border-right: 1px solid #e0e0e0;
         border-radius: 5px;
     }
-    .dropdown_content{flex-grow: 100;}
+
+     nav .dropdown_arrow:hover{
+         color:#000099;
+         background:inherit;
+     }
+    nav .dropdown_content{flex-grow: 100;}
 }
 
 /*КОНЕЦ стили для работы выпадающего меню на малых экранах*/
@@ -163,9 +176,16 @@ footer ul{
 }
 footer li{list-style-type: none;}
 footer a{color:#ccc;}/*333366*/
+footer a:hover{color:#55546F;}
 footer>div:last-child{border-top:2px solid  #e0e0e0;}
-.text_blue{color:#333399;}
+.text_blue{color:#0C3C64;}
 .text_green{color: #339900;}
 .bg-green{background-color: #66FF00;}
-.bg-blue{background-color: #66A1D2;}
+
+.bg-blue{background-color: #66A1D2;} /*бывший цвет 6666FF*/
+
+footer li {list-style-type: none;}
+footer ul {padding: 0; margin: 0; display:inline-block;}
+footer h5{font-weight: 400; font-size: 16px;}
+
 /*------------------------------------------КОНЕЦ СТИЛИ ПОДВАЛА-----------------------------------------*/
